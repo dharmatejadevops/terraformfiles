@@ -1,0 +1,9 @@
+DEPENDENCIES
+  tomcat8
+    path: .
+    metadata: true
+
+GRAPH
+  mysql (8.5.1)
+  tomcat8 (1.0.0)
+    mysql (~> 8.5.1)

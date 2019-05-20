@@ -1,0 +1,34 @@
+---
+driver:
+  name: azurerm
+  subscription_id: "56afa4ea-a01f-4797-94c5-11ba7fe2f802"
+  location: "Central Us"
+  machine_size: 'Standard_B1s'
+
+provisioner:
+  name: chef_zero
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+- name: RHEL
+  driver:
+    image_urn: RedHat:RHEL:7-RAW:latest
+    vm_name: file-vm
+    vm_tags:
+        ostype: linux
+        distro: RHEL
+
+suites:
+  - name: default
+    run_list:
+      - recipe[file_chef::file]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:

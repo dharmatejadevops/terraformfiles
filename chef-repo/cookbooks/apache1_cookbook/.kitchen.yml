@@ -1,0 +1,42 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: CHEFclass # key pair name
+  region: us-east-1 # region code of aws
+#  availability_zone: us-east-1b # availability_zone of us-west
+#  subnet_id: subnet-17ed996d # subnet-id noted from above steps
+  instance_type: t2.micro # as it is free instance type
+#  image_id: ami-0653e888ec96eab9b # image id of ubuntu
+  image_id: ami-0565af6e282977273
+#  security_group_ids: ["sg-0f7af420f5fdcd143"]
+  associate_public_ip: yes
+
+
+provisioner:
+  name: chef_zero
+# You may wish to disable always updating cookbooks in CI or other testing environments.
+# For example:
+#   always_update_cookbooks: <%= !ENV['CI'] %>
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+transport:
+  ssh_key: ./CHEFclass.pem # relative path to pem file
+# connection_timeout: 10
+# connection_retries: 5
+  username: ubuntu # username from ami-id
+
+platforms:
+- name: ubuntu-16.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apache1_cookbook::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
+    

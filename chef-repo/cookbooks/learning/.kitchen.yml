@@ -1,0 +1,35 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: KeyName
+  region: us-east-1
+  instance_type: t2.micro
+  image_id: ami-0565af6e282977273
+  associate_public_ip: yes
+
+
+provisioner:
+  name: chef_zero
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-16.04
+#  - name: centos-7
+transport:
+  ssh_key: .\KeyName.pem 
+  username: ubuntu
+suites:
+  - name: default
+    run_list:
+      - recipe[learning::default]
+      - recipe[learning::apache]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:

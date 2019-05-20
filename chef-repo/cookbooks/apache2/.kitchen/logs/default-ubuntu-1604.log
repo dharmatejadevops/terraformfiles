@@ -1,0 +1,9 @@
+I, [2019-04-22T22:42:31.979910 #1500]  INFO -- default-ubuntu-1604: -----> Destroying <default-ubuntu-1604>...
+I, [2019-04-22T22:42:32.331282 #1500]  INFO -- default-ubuntu-1604: Waited 0/300s for instance <i-0d5144a53d77a594e> to terminate.
+I, [2019-04-22T22:42:37.717759 #1500]  INFO -- default-ubuntu-1604: Waited 5/300s for instance <i-0d5144a53d77a594e> to terminate.
+I, [2019-04-22T22:42:43.824656 #1500]  INFO -- default-ubuntu-1604: Waited 10/300s for instance <i-0d5144a53d77a594e> to terminate.
+I, [2019-04-22T22:42:49.805606 #1500]  INFO -- default-ubuntu-1604: Waited 15/300s for instance <i-0d5144a53d77a594e> to terminate.
+I, [2019-04-22T22:42:55.841680 #1500]  INFO -- default-ubuntu-1604: Waited 20/300s for instance <i-0d5144a53d77a594e> to terminate.
+I, [2019-04-22T22:42:56.810914 #1500]  INFO -- default-ubuntu-1604: EC2 instance <i-0d5144a53d77a594e> destroyed.
+I, [2019-04-22T22:42:56.812071 #1500]  INFO -- default-ubuntu-1604: Removing automatic security group sg-088942e416f96585f
+I, [2019-04-22T22:42:57.360074 #1500]  INFO -- default-ubuntu-1604: Finished destroying <default-ubuntu-1604> (0m25.37s).

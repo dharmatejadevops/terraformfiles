@@ -1,0 +1,11 @@
+aws ec2 create-vpc 
+
+aws ec2 describe-vpcs
+"VpcId": "vpc-e6932d9c"
+aws ec2 describe-subnets --filters "Name=availability-zone,Values=us-east-1b"
+"SubnetId": "subnet-1ce3817b",
+aws ec2 create-security-group --group-name kitchen --vpc-id vpc-e6932d9c --description "kitechen security group"
+
+"GroupId": "sg-009ca788dc1ae9c3c"
+
+ami id: ami-0565af6e282977273

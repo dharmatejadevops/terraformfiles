@@ -1,0 +1,7 @@
+DEPENDENCIES
+  new_lamp
+    path: .
+    metadata: true
+
+GRAPH
+  new_lamp (1.0.0)

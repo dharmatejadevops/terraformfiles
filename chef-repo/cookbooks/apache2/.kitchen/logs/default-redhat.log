@@ -1,0 +1,9 @@
+I, [2019-04-22T22:42:05.672896 #1500]  INFO -- default-redhat: -----> Destroying <default-redhat>...
+I, [2019-04-22T22:42:06.975526 #1500]  INFO -- default-redhat: Waited 0/300s for instance <i-09f789b5dbea14e6f> to terminate.
+I, [2019-04-22T22:42:12.357183 #1500]  INFO -- default-redhat: Waited 5/300s for instance <i-09f789b5dbea14e6f> to terminate.
+I, [2019-04-22T22:42:18.428466 #1500]  INFO -- default-redhat: Waited 10/300s for instance <i-09f789b5dbea14e6f> to terminate.
+I, [2019-04-22T22:42:24.418203 #1500]  INFO -- default-redhat: Waited 15/300s for instance <i-09f789b5dbea14e6f> to terminate.
+I, [2019-04-22T22:42:30.453381 #1500]  INFO -- default-redhat: Waited 20/300s for instance <i-09f789b5dbea14e6f> to terminate.
+I, [2019-04-22T22:42:31.460067 #1500]  INFO -- default-redhat: EC2 instance <i-09f789b5dbea14e6f> destroyed.
+I, [2019-04-22T22:42:31.461233 #1500]  INFO -- default-redhat: Removing automatic security group sg-0b49b9a7deb950914
+I, [2019-04-22T22:42:31.974170 #1500]  INFO -- default-redhat: Finished destroying <default-redhat> (0m26.30s).
